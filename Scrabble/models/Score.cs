@@ -5,23 +5,16 @@ namespace ScrabbleNamespace
 {
   public class User
   {
-    // public List<char> StringSplit(string userInput)
-    // {
-    //   char[] myArray = userInput.toLower().ToCharArray();
-    //   List<char> List = new List<char>(myArray);
-    //   return list;
-
-    private string _word;
+    public string NewWord { get; set; }
 
     public User(string newWord)
     {
-      _word = newWord;
+      NewWord = newWord;
     }
-    
 
     public bool IsWord()
     {
-      if(this._word != "") 
+      if(this.NewWord != "") 
       {
         return true;
       }
@@ -34,54 +27,30 @@ namespace ScrabbleNamespace
 
     public char[] UserInput()
     {
-      string testword = _word;
+      string testword = NewWord;
       char[] myArray = testword.ToCharArray();
       
       return myArray; //char[] myArray;
     }
+
+    public 
+    {
+      for(int i = 0; i < NewWord.Length; i++)
+      {
+        string letter = NewWord.UserInput()[i];
+        if(
+
+      }
+    }
+
   }
 }
-    
 
 
-
-    // //New constructor code below.
-    // public Notsurewhattocallthis(string UserInput)
-    // {
-    //   _userString = UserString;
-    // }
-
-    // public string UserString {get; set;}
-    // public char[] UserArray {get; set;}
-    // //string mystring = "word";
-    // //char[] myArray = mystring.ToCharArray();
-    
-
-  // public class ScoreCalc
-  // {
-  //   string mystring = "word";
-  //   char[] myArray = mystring.ToCharArray();
-  // }
-  
-//}
-
-
-// public class Car
-// {
-//   public string MakeModel;
-//   public int Price;
-//   public int Miles;
-
-//   //New constructor code below.
-//   public Car(string makeModel, int price, int miles)
-//   {
-//     MakeModel = makeModel;
-//     Price = price;
-//     Miles = miles;
-//   }
-
-//   public bool WorthBuying(int maxPrice)
-//   {
-//     return (Price <= maxPrice);
-//   }
-// }
+// A, E, I, O, U, L, N, R, S, T       1
+// D, G                               2
+// B, C, M, P                         3
+// F, H, V, W, Y                      4
+// K                                  5
+// J, X                               8
+// Q, Z                               10

@@ -26,23 +26,10 @@ namespace Scrabble.Tests
       //Act
       User user = new User(mystring);
       //Assert
-      Assert.AreEqual(testArray, user.UserInput());
+      for(int i = 0; i < mystring.Length; i++)
+      {
+        Assert.AreEqual(testArray[i], user.UserInput()[i]);
+      }
     }
   }
 }
-
-    // [TestMethod]
-    // public void WordCalc_//something_something
-
-    
-  
-  // public void  CoffeeCost_CostOneCupNoDiscount_Int()
-  // {
-  //   //Arrange
-  //   int coffeeQuantity = 1;
-  //   double coffeeCost = 5;
-  //   //Act
-  //   Coffee coffeeOrder = new Coffee(coffeeQuantity);
-  //   //Assert
-  //   Assert.AreEqual(coffeeCost, coffeeOrder.CoffeeCost());
-  // }
